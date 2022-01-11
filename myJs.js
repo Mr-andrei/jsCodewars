@@ -83,21 +83,126 @@
 //     true,  true,  true,  true ,
 //     false, false, true,  true ]))
 
-function array(arr){
-    let newArr = arr.replace(/[\s.,%]/g, '').split("")
-    if(newArr.length <= 2){
-        return null
-    }
-    else {
-     newArr.pop()
-        newArr.shift()
-    }
-  return newArr.join(" ")
+// function array(arr){
+//     let newArr = arr.replace(/[\s.,%]/g, '').split("")
+//     if(newArr.length <= 2){
+//         return null
+//     }
+//     else {
+//      newArr.pop()
+//         newArr.shift()
+//     }
+//   return newArr.join(" ")
+//
+// }
+//
+//
+// console.log(array('4 f 2 e d f c e 3 e 2 d'))
+//
+//
 
+// function arrayPlusArray(arr1, arr2) {
+//     let newArr = [...arr1, ...arr2]
+//     newArr.reduce((acc, item)=> acc + item)
+//     return  newArr.reduce((acc, item)=> acc + item)
+// }
+// console.log( arrayPlusArray([1, 2, 3], [4, 5, 6]))
+//
+// function stringToArray(string){
+//  return string.split(" ")
+// }
+// console.log(stringToArray("Robin Singh"))
+
+// function check(a, x) {
+//   return a.includes(x)
+// }
+// console.log(check([101, 45, 75, 105, 99, 107], 107))
+//
+
+
+
+// function digitize(n) {
+//   let newArr = String(n).split("").reverse().join()
+//   let b =[]
+//   for(let i = 0; i < 5; i++)
+//   return Number(newArr)
+// }
+//
+// console.log(digitize(35231))
+
+
+// function positiveSum(arr) {
+//   let  sum  = 0
+//   for (let i =0; i < arr.length; i++){
+//     if ( arr[i] > 0 ){
+//       sum +=arr[i]
+//     }
+//   }
+//   return sum
+// }
+// console.log(positiveSum([1,2,3,4,5]))
+//
+
+// function maps(x){
+//   return x.map( m => m + m )
+// }
+// console.log(maps([1, 2, 3]))
+
+// function firstNonConsecutive (arr) {
+//   let newArr = []
+//   for(let i = 0; i < arr.length; i++){
+//     let a = arr[i+1]
+//     if(arr[i] > arr[i+1] && arr[i] < arr[i-1] ){
+//
+//      newArr.push(arr[i])
+//     }
+//
+//     else return newArr
+//   }
+//   console.log(newArr)
+// }
+//
+// console.log(firstNonConsecutive([-9,-8,-7,-6,-5,-4,-3,-2,-1,0]))
+
+
+// function getAverage(marks){
+// let b = marks.reduce((acc, elm) => (acc + elm) )
+//
+//   return Math.floor(b / marks.length)
+// }
+//
+// console.log(getAverage([1,2,3,4,5,]))
+//
+
+
+function countPositivesSumNegatives(input) {
+  let polsum = 0
+  let minusSum = 0
+  if(input.length <= 0  ){
+    return []
+  }
+  else{
+  for(let i = 0; i < input.length; i++){
+    if(input[i] !== 0 && input[i] > 0 ){
+      polsum += 1
+    }
+    else if( input[i] !== 0 && input[i] < 0 ){
+      minusSum += input[i]
+    }
+
+  }
+  return [polsum, minusSum]}
 }
 
+console.log(countPositivesSumNegatives([]))
 
-console.log(array('4 f 2 e d f c e 3 e 2 d'))
+
+
+
+
+
+
+
 
 
 
