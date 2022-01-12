@@ -237,17 +237,12 @@
 // < 100 >= 70 = 'Sad!'
 // > 100 = 'Miserable!'
 
-
+//
 // function pairZeros(arr) {
-//     let newArr = []
-//    for(let i = 0; i < arr.length; i++){
-//        if(arr[i] !== 0){
-//            newArr.push(arr[i])
-//        }
-//        else if( arr[i] === 0){
-//        }
-//    }
-//    return newArr
+//     let  seenZero = 0;
+//     return arr.filter(function(num){
+//         return num != 0 || seenZero++ % 2 == 0;
+//     });
 // }
 //
 // console.log(pairZeros([1,0,1,0,2,0,0,3,0]))    //[1,0,1,2,0,3,0]
@@ -264,3 +259,22 @@
 // }
 //
 // console.log(getMaxValue([1222,22,12,123,11,1111]))
+
+
+// function strong(n) {
+//      if( n <= 1){
+//          return 1
+//      }
+//       else return n * strong(n-1)
+//         }
+//
+//
+// console.log(strong(5))
+//  console.log(strong(14))
+
+
+
+
+
+
+
