@@ -362,3 +362,20 @@
 // army[0](); // у 0-го стрелка будет номер 10
 // army[5](); // и у 5-го стрелка тоже будет номер 10
 // // ... у всех стрелков будет номер 10, вместо 0, 1, 2, 3...
+
+//
+// function swap (string) {
+//
+//     return string.split("").map(m => /[aeiou]/.test(m) ? m.toUpperCase() : m  ).join("");
+// }
+//
+// console.log(swap("HelloWorld!"))
+
+
+function minMax(arr){
+    let min = Math.min(...arr)
+    let max = Math.max(...arr)
+    return [min,max]; // fix me!
+}
+
+console.log(minMax([1,2,3,4,5]))
