@@ -274,7 +274,64 @@
 
 
 
+// let arr = [21111,10,123,12333,123]
+//
+// console.log(arr.reduce((a,b) => a > b ? a : b ))
+// //
+//
+//
+// let arr = [1,22,12,323]
+// let newArr = []
+//   arr.forEach( f => {
+//      return newArr.push(f + 10)
+//  })
+//
+// console.log(newArr)
 
 
+// function getEvenNumbers(numbersArray){
+//    return numbersArray.reduce((a,b) => {
+//        if(b % 2 ===0){
+//            a.push(b)
+//        }
+//        return a
+//    },[])
+// }
+//
+//
+// console.log(getEvenNumbers([1,2,3,6,8,10]))
+//
+// function mergeArrays(a, b) {
+//     let newArr = []
+//     let lenght = a.length > b.length ? a.length : b.length
+//     for (let i = 0; i < lenght; i++) {
+//         if (a[i] !== undefined && b[i] !== undefined){
+//             newArr.push(a[i], b[i])}
+//         else if(a[i] === undefined) newArr.push(b[i])
+//         else if(b[i] === undefined) newArr.push(a[i])
+//     }
+//
+//    return newArr
+// }
+//
+// console.log(mergeArrays([1, 2, 3, 4, 5, 6, 7, 8], ['a', 'b', 'c', 'd', 'e']))
 
 
+// function last(x){
+// return  x.split(" ").sort(function(a,b){
+//         return +( /\d{1,}$/.exec(a) || [0] )[0] -
+//             +( /\d{1,}$/.exec(a) || [0] )[0];
+//     }
+// )
+//
+//
+// }
+//
+// console.log(last('man i need a taxi up to ubud'))
+
+// function numbers (...value) {
+// let b =  value
+//     return  b
+// }
+const numbers = (...arr) => arr.every(x => typeof x === 'number')
+console.log(numbers((1, "a", 3)))
