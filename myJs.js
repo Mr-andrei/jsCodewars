@@ -298,7 +298,6 @@
 //    },[])
 // }
 //
-//
 // console.log(getEvenNumbers([1,2,3,6,8,10]))
 //
 // function mergeArrays(a, b) {
@@ -319,8 +318,8 @@
 
 // function last(x){
 // return  x.split(" ").sort(function(a,b){
-//         return +( /\d{1,}$/.exec(a) || [0] )[0] -
-//             +( /\d{1,}$/.exec(a) || [0] )[0];
+//         return +( /\d{1}$/.exec(a) || [0] )[0] -
+//             +( /\d{1}$/.exec(a) || [0] )[0];
 //     }
 // )
 //
@@ -333,5 +332,33 @@
 // let b =  value
 //     return  b
 // }
-const numbers = (...arr) => arr.every(x => typeof x === 'number')
-console.log(numbers((1, "a", 3)))
+
+//
+// const numbers = (...arr) => arr.every(x => typeof x === 'number')
+// console.log(numbers((1, "a", 3)))
+//
+
+// function makeArmy() {
+//     let shooters = [];
+//  let globalscoup = {
+//      i: undefined,
+//
+//  }
+//     let i = 0;
+//  let x = i
+//     while (i < 10) {
+//         let shooter = function() { // функция shooter
+//             console.log( x ); // должна выводить порядковый номер
+//         };
+//         shooters.push(shooter);
+//         i++;
+//     }
+//
+//     return shooters;
+// }
+//
+// let army = makeArmy();
+//
+// army[0](); // у 0-го стрелка будет номер 10
+// army[5](); // и у 5-го стрелка тоже будет номер 10
+// // ... у всех стрелков будет номер 10, вместо 0, 1, 2, 3...
