@@ -273,7 +273,6 @@
 //  console.log(strong(14))
 
 
-
 // let arr = [21111,10,123,12333,123]
 //
 // console.log(arr.reduce((a,b) => a > b ? a : b ))
@@ -371,11 +370,170 @@
 //
 // console.log(swap("HelloWorld!"))
 
+//
+// function minMax(arr){
+//     let min = Math.min(...arr)
+//     let max = Math.max(...arr)
+//     return [min,max]; // fix me!
+// }
+//
+// console.log(minMax([1,2,3,4,5]))
 
-function minMax(arr){
-    let min = Math.min(...arr)
-    let max = Math.max(...arr)
-    return [min,max]; // fix me!
+// Task 01
+// Реализовать функцию sum которая суммирует 2 числа следующим образом sum(3)(6) === 9
+
+// function sumTwo (a){
+//     return function (b){
+//         return a+b
+//     }
+// }
+// console.log(sumTwo(3)(6))
+
+// Task 02
+// Реализовать функцию makeCounter которая работает следующим образом:
+// const counter = makeCounter();
+// counter(); // 1
+// counter(); // 2
+// const counter2 = makeCounter();
+// counter2(); // 1
+// counter(); // 3
+// function makeCounter (value){
+//
+//     return function increase (){
+//        return  ++value
+//     }
+// }
+// let counter = makeCounter(10)
+// let counter2 = makeCounter(10)
+// console.log(counter())
+// console.log(counter2())
+// console.log(counter())
+// console.log(counter2())
+// Task 03
+// Переписать функцию из Task 02 так, что бы она принимала число в качестве аргумента и это число было стартовым значением счетчика
+// и возвращала следующий объект методов:
+// increase: +1
+// decrease: -1
+// reset: установить счетчик в 0;
+// set: установить счетчик в заданное значение;
+
+// Task 04*
+// Реализовать функцию superSum которая принимает число в качестве аргумента, которое указывает на количество слагаемых
+// и что бы корректно работали следующие вызовы:
+// 1) superSum(0) //0
+// 2) superSum(3)(2)(5)(3) //10
+// 3) superSum(3)(2)(5,3) //10
+// 4) superSum(3)(2,5,3) //10
+// 5) superSum(3)(2,5)(3) //10
+// 6) superSum(3)(2,5)(3,9) //10
+
+//
+// function superSum(arg) {
+//     if (arg <= 0) return 0
+//     if (arg === 1) return arg
+//     let arr = []
+//     return function helper (...args) {
+//         arr = [...arr, ...args]
+//       if(arr.length === arg) {
+//        return  arr.reduce((a,b) => a + b )
+//       }
+//           else return helper
+//     }
+// }
+
+// console.log(superSum(3)(2)(5)(3))
+//
+//
+
+// function sumRec (x, n){
+//     if (n <= 1) return x
+//     else{
+//    return      x * sumRec(x, n-1)
+//     }
+// }
+//
+// console.log(sumRec(2,10))
+
+//
+// let company = { // тот же самый объект, сжатый для краткости
+//     sales: [{name: 'John', salary: 1000}, {name: 'Alice', salary: 600 }],
+//     development: {
+//         sites: [{name: 'Peter', salary: 2000}, {name: 'Alex', salary: 1800 }],
+//         internals: [{name: 'Jack', salary: 1300}]
+//     }
+// };
+//
+// // Функция для подсчёта суммы зарплат
+// function sumSalaries(department) {
+//     if (Array.isArray(department)) { // случай (1)
+//         return department.reduce((prev, current) => prev + current.salary, 0); // сумма элементов массива
+//     } else { // случай (2)
+//         let sum = 0;
+//         for (let subdep of Object.values(department)) {
+//             sum += sumSalaries(subdep); // рекурсивно вызывается для подотделов, суммируя результаты
+//         }
+//         return sum;
+//     }
+// }
+//
+// console.log(sumSalaries(company))
+//
+
+// function  sumTo(n) {
+//     if(n <= 1) return 1
+//     return n + sumTo(n-1)
+// }
+//
+// console.log(sumTo(100))
+//  function sumTo (n){
+//     let value = 0
+//     for(let i = 0; i <= n; i++){
+//         value +=i
+//     }
+//     return value
+//  }
+//
+//
+// console.log(sumTo(100))
+//
+// function factorial (n){
+//     if (n <= 0) return 1
+//     return n * factorial(n-1)
+// }
+//
+// console.log(factorial(5))
+//
+//Fn = Fn-1 + Fn-2
+//
+// function fib (n){
+//     return n <= 1 ? n : fib(n - 1) + fib(n - 2)
+// }
+//
+// console.log(fib(10))
+
+// function mygcd(x,y){
+//    return  y == 0 ? x : mygcd(y, x % y)
+// }
+//
+// console.log(mygcd(500,1000))
+
+//
+// function bump(x){
+//     let newArr = []
+//    let a = x.split("")
+//     for(let i = 0; i < a.length;i++){
+//         if(a[i] === "n"){
+//             newArr.push(a[i])
+//         }
+//     }
+//     return newArr.length>= 15 ? "Car Dead" : "Woohoo!"
+// }
+//
+// console.log(bump("_nnnnnnn_n__n______nn__nn_nnn"))
+//
+//
+function determineTime (durations) {
+  return  durations.join(",")
 }
 
-console.log(minMax([1,2,3,4,5]))
+console.log(determineTime(["00:30:00", "02:30:00", "00:15:00"]))
