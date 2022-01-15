@@ -475,7 +475,7 @@
 //         return sum;
 //     }
 // }
-//
+
 // console.log(sumSalaries(company))
 //
 
@@ -532,8 +532,67 @@
 // console.log(bump("_nnnnnnn_n__n______nn__nn_nnn"))
 //
 //
-function determineTime (durations) {
-  return  durations.join(",")
-}
 
-console.log(determineTime(["00:30:00", "02:30:00", "00:15:00"]))
+// function diffBig2(arr) {
+//   let newArr = [...arr]
+//   let a = Math.max(...newArr)
+//   let index =  newArr.indexOf(a)
+//   newArr.splice( index,1)
+//   let b = Math.max(...newArr)
+//
+//     return a-b
+// }
+//
+//
+// console.log(diffBig2([1, 8, 3]))
+
+
+// function part(x){
+//   let newArr = ['Mine\'s a Pint']
+//   let pravda = false
+//   for(let i = 0; i < x.length; i++){
+//     if(x[i] === "Partridge" || x[i] === "PearTree" || x[i] === "Chat" || x[i] === "Dan" || x[i] === "Toblerone" || x[i] === "Lynn" || x[i] === "AlphaPapa" || x[i] === "Nomad"   ){
+//       newArr.push("!")
+//       pravda = true
+//     }
+//   }
+//   return pravda ? newArr.join("") : 'Lynn, I\'ve pierced my foot on a spike!!'
+// }
+
+
+
+// function part(x){
+//   let arr = ['Partridge','PearTree','Chat','Dan','Toblerone','Lynn','AlphaPapa','Nomad']
+//   let count = x.filter(item => arr.includes(item)).length
+//  return (count > 0) ? 'Mine\'s a Pint!' + '!'.repeat(count-1) : 'Lynn, I\'ve pierced my foot on a spike!!'
+// }
+//
+//
+//
+// console.log(part(['Grouse', 'Partridge', 'Pheasant']))
+// console.log(part(['Pheasant', 'Goose', 'Starling', 'Robin']))
+
+// function flattenAndSort(array) {
+//
+//   return  array.reduce((a,b)=> [...a, ...b]).sort((a,b) =>  a-b)
+// }
+//
+// console.log(flattenAndSort([[3, 2, 1], [7, 9, 8], [6, 4, 5]]))
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
