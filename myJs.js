@@ -579,22 +579,33 @@
 //
 // console.log(flattenAndSort([[3, 2, 1], [7, 9, 8], [6, 4, 5]]))
 //
-const cannonsReady = (gunners) => {
-    //your solution here
-}
+// function gooseFilter (birds) {
+//     let  geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+//     return   birds.filter(b => !geese.includes(b))
+//
+//
+//
+// };
+// console.log(gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]))
+//
 
+//
+// function digitize(n) {
+//     let a = String(n).split("").reverse()
+//   return    a.map( m => Number(m))
+// }
+// // String(n).split(" ").reverse()
+// console.log(digitize(35231))
 
+// function multipleOfIndex(array) {
+//     return array.filter( (m,i) => m%i === 0 )
+// }
+//
+//
+// console.log(multipleOfIndex([22, -6, 32, 82, 9, 25]))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+// function noSpace(x){
+//     return x.split(" ").filter(f => f !== "").join("")
+// }
+//
+// console.log(noSpace('8 j 8   mBliB8g  imjB8B8  jl  B'))
