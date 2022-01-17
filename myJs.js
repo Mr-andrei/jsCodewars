@@ -609,3 +609,116 @@
 // }
 //
 // console.log(noSpace('8 j 8   mBliB8g  imjB8B8  jl  B'))
+// function findShort(s){
+//
+//  return  Math.min(...s.split(" ").map(m => m.length ))
+// }
+//
+// console.log(findShort("bitcoin take over the world maybe who knows perhaps"))
+
+//
+// const getValue = (arr) => {
+//     return arr.reduce((a,b) =>  a < b ? a: b)
+// }
+//
+//
+// console.log(getValue([1,23,12,34,56,19,22,-5,100]))
+
+
+// Д.З.:
+// 7. Функция-банкомат принимает параметром целое натуральное число (сумму).
+// Возвращает массив с наименьшим количеством купюр, которыми можно выдать эту
+// сумму. Доступны банкноты следующих номиналов:
+// const banknotes = [1000, 500, 100, 50, 20, 10, 5, 2, 1].
+// Считаем, что количество банкнот каждого номинала не ограничено
+
+
+// export function getBanknoteList(amountOfMoney) {
+//     const banknotes = [1000, 500, 100, 50, 20, 10, 5, 2, 1]
+//     return
+// }
+// 4. Функция isEvenIndexSumGreater принимает  параметром массив чисел.
+// Если сумма чисел с чётными ИНДЕКСАМИ!!! (0 как чётный индекс) больше
+// суммы чисел с нечётными ИНДЕКСАМИ!!!, то функция возвращает true.
+// В противном случае - false.
+
+//
+//  const isEvenIndexSumGreater = (arr)=> {
+//     let  a = arr.filter((f,i) => i%2 === 0  ).reduce((a,b) => a+b )
+//     let  b = arr.filter((f,i) => i%3 === 0  ).reduce((a,b) => a+b )
+//      return a > b
+// }
+//
+// console.log(isEvenIndexSumGreater([100, 1, 200, 2]))
+
+
+// 5. Функция getSquarePositiveIntegers принимает параметром массив чисел и возвращает новый массив.
+// Новый массив состоит из квадратов целых положительных чисел, котрые являются элементами исходгого массива.
+// Исходный массив не мутирует.
+
+
+// function getSquarePositiveIntegers(array) {
+// return array.filter( f => Number.isInteger(f) && f > 0 ).map(m => m*m)
+//
+// }
+//
+// console.log(getSquarePositiveIntegers([4, 5.6, -9.8, 3.14, 10, 6, 8.34, -2]))
+//
+// function twoOldestAges(ages) {
+//   let newArr = [...ages]
+//   let a = Math.max(...newArr)
+//   let index =  newArr.indexOf(a)
+//   newArr.splice( index,1)
+//   let b = Math.max(...newArr)
+//
+//     return [a,b]
+// }
+//
+//
+// console.log(diffBig2([1, 8, 3]))
+
+// function evenNumbers(array, number) {
+//     let newArr = array.filter (f=> f%2 === 0)
+//     let c =  newArr.length - number
+//     return  newArr.splice(c,number)
+// }
+//
+//
+// console.log(evenNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9], 3))
+//
+//
+// function doubleEveryOther(a) {
+//     return a.map((m,i) => (i+1)%2 === 0 ? m*2 : m);
+// }
+//
+// console.log(doubleEveryOther([1,2,3,4]))
+
+// function nthSmallest(arr, pos){
+//    return arr.sort((a,b) => a-b)[pos-1]
+// }
+//
+//
+// console.log(nthSmallest([3,1,2],2))
+// function maxProduct(numbers, size){
+//   let a =  numbers.sort((a,b) => b-a)
+//     let c = 1
+//     for(let i = 0; i < size; i++){
+//     c *= a[i]
+//     }
+//    return  c
+// }
+//
+
+// let arrayLeaders = numbers => {
+//     let abc = []
+//     let leng =  numbers.length
+//     for(let i = 0; i < leng;i++){
+//         let a = numbers.shift()
+//         let ter = numbers.reduce((a,b) => a+b,0)
+//         if(a > ter){
+//             abc.push(a)
+//         }
+//     }
+//     return abc
+// }
+
