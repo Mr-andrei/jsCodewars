@@ -560,7 +560,6 @@
 // }
 
 
-
 // function part(x){
 //   let arr = ['Partridge','PearTree','Chat','Dan','Toblerone','Lynn','AlphaPapa','Nomad']
 //   let count = x.filter(item => arr.includes(item)).length
@@ -578,7 +577,7 @@
 // }
 //
 // console.log(flattenAndSort([[3, 2, 1], [7, 9, 8], [6, 4, 5]]))
-//
+
 // function gooseFilter (birds) {
 //     let  geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
 //     return   birds.filter(b => !geese.includes(b))
@@ -721,4 +720,84 @@
 //     }
 //     return abc
 // }
+
+// pow(2, 3) = 8
+
+
+// function arraySum(arr){
+//     let result = 0
+//     for (let i = 0; i < arr.length ; i++) {
+//         if(Array.isArray(arr[i])){
+//             result += arraySum(arr[i])
+//             }
+//         else result += arr[i]
+//         }
+//     return result
+//     }
+// console.log(arraySum([1, 2, [1, 2]]))
+
+// function sumOfIntegersInString(s){
+//     return parseInt(s.replace(/\D+/g,"")).toString()
+// }
+// console.log(sumOfIntegersInString("The30quick20brown10f0x1203jumps914ov3r1349the102l4zy dog"))
+//
+
+
+// function arraySum(arr){
+//     return arr.reduce((a,b) => Array.isArray(b) ?  a + arraySum(b) : a + b ,0)
+// }
+// console.log(arraySum([1, 2, [1, 2],[2,2,[1,3]],[1,2]]))
+//
+// function mygcd(x,y){
+//     let arr = []
+//     for (let i = 1; i < 10000; i++) {
+//         if ( x%i === 0 && y%i === 0 ){
+//             arr.push(i)
+//         }
+//     }
+//     return Math.max(...arr)
+//
+// }
+// console.log(mygcd(30,12))
+// function stray(numbers) {
+//    return +numbers.filter( (value) => { return numbers.indexOf(value) == numbers.lastIndexOf(value) } )
+// }
+// let valueA = Math.max(...numbers)
+// let valueB = Math.min(...numbers)
+// let arrA = []
+// let arrB = []
+// for (let i = 0; i < numbers.length ; i++) {
+//     if(numbers[i] === valueA){
+//         arrA.push(numbers[i])
+//     }
+//     if(valueB === numbers[i]) arrB.push(numbers[i])
+// }
+//
+// return arrA.length === 1 ? arrA[0] : arrB[0]
+
+// console.log(stray([ 0, 1, 0 ]))
+// console.log(stray([ 0, 1, 1, 1, 1, 1, 1, 1 ]))
+// console.log(stray([ 8, 8, 8, 8, 8, 8, 8, 7 ]))
+
+
+function solution(nums){
+if(nums === null || nums === [] ) return []
+   else return nums.sort((a,b) => a-b)
+}
+
+console.log(solution([1,2,3,10,5]))
+
+console.log((solution(null)))
+
+
+
+
+
+
+
+
+
+
+
+
 
