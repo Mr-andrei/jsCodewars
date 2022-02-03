@@ -780,24 +780,163 @@
 // console.log(stray([ 8, 8, 8, 8, 8, 8, 8, 7 ]))
 
 
-function solution(nums){
-if(nums === null || nums === [] ) return []
-   else return nums.sort((a,b) => a-b)
+//
+// function sumOfMinimums(arr) {
+//  return   arr.reduce((a,b)=> a + Math.min(...b),0)
+// }
+//
+//
+// console.log(sumOfMinimums( [[7, 9, 8, 6, 2], [6, 3, 5, 4, 3], [5, 8, 7, 4, 5]]))
+
+
+// function lastDigit(n, d) {
+//     if (d <= 0) return []
+//     let arr = Array.from(String(n), Number)
+//     let leng = arr.length
+//     if (d >= 0 && d <= leng) {
+//         let a = leng - d
+//         return arr.slice(a)
+//     }
+//     if (d > leng) return arr
+// }
+//
+// console.log(lastDigit(123767, 4))
+// console.log(lastDigit(1343, 5))
+// console.log(lastDigit(1, 1))
+
+// function cubeSum(n, m){
+//     if (n === m ) return 0
+//     let sum = 0
+//     for (let i =( n < m ? n : m) + 1; i <= (n > m ? n : m); i++) {
+//         sum+= i**3
+//     }
+//     return sum
+// }
+// console.log(cubeSum(2, 3))
+//
+// const prevMultOfThree = n => {
+//     if (n % 3 === 0) return n
+//      let arr = Array.from(String(n), Number)
+//     let leng = arr.length
+//     let value = 0
+//     for (let i = 0; i < leng ; i++) {
+//      arr.length = leng-1
+//         if(arr.join("") % 3 === 0) {
+//           value =  arr.join("")
+//         }
+//      return value
+//     }
+//
+//
+// }
+//
+//
+// console.log(prevMultOfThree(1244)) //12
+//
+//
+
+
+
+// const fruit = ['apple','banan','orange','banan','banan','apple','orange','banan','orange','banan','orange','apple']
+//
+// // const sortFruit = (arr) => {
+// //     let newOnj = {}
+// //     for (let i = 0; i < arr.length; i++) {
+// //         newOnj[arr[i]] += i
+// //     }
+// //     return newOnj
+// // }
+//
+// // console.log(sortFruit(fruit))
+//
+// let newArr = fruit.reduce((a,b) => a[b] = (a[b] || 0) + 1 ,{})
+// console.log(newArr)
+
+
+// реализовать счетчик counter в виде объекта со следующими методами:
+// get current count; - выводит текущее значение счетчика
+// increment; - увеличивает значение счетчика на 1
+// decrement; - уменьшает значение счетчика на 1
+// set current count; - принимает и присваивает значение счетчику
+// rest current count - устанавливает значение счетчика равным 0
+// все методы должны ссылаться на сам объект
+
+// let counter = {
+//     count : 0,
+//     getCurrentCount (){
+//         console.log(this.count)
+//     },
+//     increment() {
+//         ++this.count
+//        return  this
+//     },
+//     decrement(){
+//         --this.count
+//        return  this
+//     },
+//     setCurrentCount (value) {
+//        this.count = value
+//         return this
+//     },
+//     restCurrentCount () {
+//         this.count = 0
+//     }
+// }
+//
+// counter.setCurrentCount(10).increment().increment().increment().decrement().getCurrentCount()
+//
+//// Написать функцию конструктор myFirstConstructorFunc которая принимает 2 параметра name и age и возвращает объект
+// // у которого будут эти свойства и метод greeting из Task 01
+//
+
+// function MyFirstConstructorFunc (name,age) {
+//     this.name=name
+//     this.age=age
+// }
+// let  fn = new MyFirstConstructorFunc("Andrei",25)
+// console.log(fn)
+
+// let One = {name: 'One'};
+// let Two = {name: 'Two', sayHello: function() {console.log(`Hello, my name is ${this.name}`)}};
+//
+// Two.sayHello.bind(One)()
+
+
+// создайте объект helperObj у которого есть следующие методы:
+// changeName - меняет значение у свойства name объекта на полученное значение
+// setAge - устанавливает полученное значение в свойство age объекта
+// greeting - используется функция sayHello из Task 05
+// можно использовать @ts-ignore
+
+// let helperObj = {
+//     changeName(valueName){
+//         this.name = valueName
+//     },
+//     setAge (valueAge) {
+//         this.age = valueAge
+//     },
+//     greeting :
+//         function() {console.log(`Hello, my name is ${this.name}`)}
+//
+// }
+
+// f([1, 2, null, 7, 8, null, 3]); // => [2, 4, 14, 16, 6]
+
+// function f (arr) {
+//     let newArr = []
+//     for (let i = 0; i < arr.length; i++) {
+//         if(arr[i] ) {
+//             newArr.push(arr[i]*2)
+//         }
+//     }
+//     return newArr
+// }
+//
+// console.log(f([1, 2, null, 7, 8, null, 3]))
+
+
+for (var i = 0; i < 10; i++) {
+    setTimeout(function () {
+        console.log(i);
+    }, 100);
 }
-
-console.log(solution([1,2,3,10,5]))
-
-console.log((solution(null)))
-
-
-
-
-
-
-
-
-
-
-
-
-
