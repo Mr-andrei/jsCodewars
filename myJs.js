@@ -836,7 +836,6 @@
 //
 
 
-
 // const fruit = ['apple','banan','orange','banan','banan','apple','orange','banan','orange','banan','orange','apple']
 //
 // // const sortFruit = (arr) => {
@@ -935,8 +934,153 @@
 // console.log(f([1, 2, null, 7, 8, null, 3]))
 
 
-for (var i = 0; i < 10; i++) {
-    setTimeout(function () {
-        console.log(i);
-    }, 100);
+// for (var i = 0; i < 10; i++) {
+//     setTimeout(function () {
+//         console.log(i);
+//     }, 100);
+// }
+
+
+// // Есть некоторая строка (const str = 'fgfggg';), что будет, если мы возьмем str[0]
+// const str = 'fgfggg'
+// console.log(str[0])
+//
+// // Task 2
+// // Реализуйте необходимый код, что бы выражение (2).plus(3).minus(1) сработало и вернуло 4
+//
+//
+//
+//
+//
+//
+// // Task 3
+// // Реализуйте функцию, которая принимает следующие аргументы (строки) '*', '1', 'b', '1c', и возвращает строку '1*b*1c'
+//
+// function someFn (a, ...args) {
+//     console.log(args.join(""))
+// }
+//
+// someFn('*', '1', 'b', '1c')
+
+// Напишите функцию которая найдет сумму всех вершин в структуре данны типа tree
+// Рекурсивно
+// В цикле
+
+// const tree = {
+//     valueNode: 3,
+//     next: [{
+//         valueNode: 1,
+//         next: null
+//     },
+//         {
+//             valueNode: 3,
+//             next: null
+//         },
+//         {
+//             valueNode: 2,
+//             next: null
+//         },
+//         {
+//             valueNode: 2,
+//             next: [
+//                 {
+//                     valueNode: 1,
+//                     next: null
+//                 },
+//                 {
+//                     valueNode: 5,
+//                     next: null
+//                 }
+//             ]
+//         }]
+// };
+//
+//
+// function sumFn ( obj ) {
+//     let value = 0
+//     for (let key in obj){
+//         if
+//     }
+//
+// }
+//
+// Реализовать функцию f: f(2, 3) -> 5, при вызове f(2)(3), тоже вернет 5
+
+// function somFn (a){
+//     return function (b) {
+//         return a+b
+//     }
+// }
+//
+// console.log(somFn(2)(3))
+//
+
+// Реализовать функцию f: f(1)(2)(3)() -> 6, f(0)(3)(1)(5)() -> 8
+
+
+// function somFn (a){
+//     return function (b) {
+//         return function (c){
+//            return function (){
+//               return  a+b+c
+//            }
+//         }
+//     }
+// }
+
+// console.log(somFn(1)(2)(3)())
+//
+// function somFn (a){
+//     return function (b) {
+//         return function (c){
+//            return function (d){
+//               return  function (){
+//                   return b+d+(a/c)
+//               }
+//            }
+//         }
+//     }
+// }
+//
+// console.log(somFn(0)(3)(1)(5)())
+
+// Необходимо написать функцию, принимающую в аргументах массив целых чисел и возвращающую новый массив, состоящий только из уникальных значений первого массива.
+
+// let arrr = [1, 2, 2, 1, 4, 5, 6, 7, 3, 4, 6, 7, 8, 4, 2, 4, 5, 6, 7, 8, 9]
+//
+//
+// function sortArr(arr) {
+//     let newArr = {}
+//
+//     arr.forEach(item => {
+//         newArr[item] = item
+//     })
+//     return Object.keys(newArr)
+// }
+// console.log(sortArr(arrr))
+
+
+// Написать функцию, принимающую аргументом массив чисел и возвращающую новый массив, состоящий из удвоенных значений первого.
+// f([1, 2, null, 7, 8, null, 3]); // => [2, 4, 14, 16, 6]
+
+// function someFn(arr) {
+//     return arr.filter(f => f !== null).map(m => m * 2)
+// }
+//
+// console.log(someFn([1, 2, null, 7, 8, null, 3]))
+
+
+// Есть строка, состоящая из разных скобок - str = "())({}}{()][][", написать функцию проверки закрыты ли все.
+
+
+function someFnn (str) {
+    let a = str.split("")
+    let newObj = {}
+    for (let i = 0; i <str.length; i++) {
+
+    }
+
+    return a
 }
+
+console.log(someFnn("())({}}{()][]["))
