@@ -1060,17 +1060,7 @@
 // console.log(sortArr(arrr))
 
 
-// Написать функцию, принимающую аргументом массив чисел и возвращающую новый массив, состоящий из удвоенных значений первого.
-// f([1, 2, null, 7, 8, null, 3]); // => [2, 4, 14, 16, 6]
 
-// function someFn(arr) {
-//     return arr.filter(f => f !== null).map(m => m * 2)
-// }
-//
-// console.log(someFn([1, 2, null, 7, 8, null, 3]))
-
-
-// Есть строка, состоящая из разных скобок - str = "())({}}{()][][", написать функцию проверки закрыты ли все.
 
 
 function someFnn (str) {
@@ -1079,7 +1069,6 @@ function someFnn (str) {
     for (let i = 0; i <str.length; i++) {
 
     }
-
     return a
 }
 
