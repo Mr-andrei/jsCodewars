@@ -1060,16 +1060,37 @@
 // console.log(sortArr(arrr))
 
 
+function findRoutes(routes) {
+    let newArr = {}
+    routes.reduce((a,b)=>  a.concat(b),[]).forEach(item => {
+        newArr[item] = item
+    })
+     return Object.keys(newArr).join(",")
 
-
-
-function someFnn (str) {
-    let a = str.split("")
-    let newObj = {}
-    for (let i = 0; i <str.length; i++) {
-
-    }
-    return a
 }
 
-console.log(someFnn("())({}}{()][]["))
+
+console.log(findRoutes([["MNL", "TAG"], ["CEB", "TAC"], ["TAG", "CEB"], ["TAC", "BOR"]]))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
