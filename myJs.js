@@ -1059,38 +1059,72 @@
 // }
 // console.log(sortArr(arrr))
 
+//
+// function firstNonConsecutive(arr) {
+//     for (let i = 0; i < arr.length - 1; ++i) {
+//         if (arr[i] + 1 !== arr[i + 1]) {
+//             return arr[i + 1]
+//         }
+//     }
+//     return null
+//
+// }
+//
+// console.log(firstNonConsecutive([1, 2, 3, 4, 6, 7, 8]))
+// // firstNonConsecutive([1,2,3,4,6,7,8])
+//
+//
+// // && arr[i] + 1 !== arr[i+1]
+//
+//
+//
+// function well(x) {
+//     let goodArr = x.filter(f => f === 'good')
+//
+//
+//
+//     if (goodArr.length < 2){
+//         return 'Publish!'
+//     }
+//     else if (goodArr.length > 2){
+//         return  'I smell a series!'
+//     }
+//
+//
+// }
+//
+// console.log((well(['bad', 'bad', 'bad']), 'Fail!'));
+// console.log((well(['good', 'bad', 'bad', 'bad', 'bad']), 'Publish!'));
+// console.log((well(['good', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'bad', 'good']), 'I smell a series!'));
+//
 
-function findRoutes(routes) {
-    let newArr = {}
-    routes.reduce((a,b)=>  a.concat(b),[]).forEach(item => {
-        newArr[item] = item
-    })
-     return Object.keys(newArr).join(",")
+// function countPositivesSumNegatives(input) {
+//     if (!input) return []
+//    let sumNegativeNumbers =  input.reduce((a, b) => b < 0 ? a + b : a + 0, 0)
+//    let sumPositiveNumbers =  input.filter((a, b) => a > 0)
+//    let sumzero =  input.filter((a, b) => a === 0)
+//     if(sumzero.length > 1 ) return sumzero
+//     return [sumPositiveNumbers.length,sumNegativeNumbers]
+// }
+//
+// console.log(countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]))
+//
+//
 
+
+function abbrevName(name){
+
+
+    var splits = name.split(" ");
+    var stringItog = "";
+
+    for (let i = 0; i < splits.length; i++) {
+        let Name = splits[i];
+        let First = Name.substring(0, 1).toUpperCase();
+        let Leftovers = Name.substring(1, Name.length)
+        stringItog += First + Leftovers + " ";
+    }
+    return stringItog
 }
 
-
-console.log(findRoutes([["MNL", "TAG"], ["CEB", "TAC"], ["TAG", "CEB"], ["TAC", "BOR"]]))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(abbrevName("Patrick Feenan"))
