@@ -1112,19 +1112,55 @@
 //
 
 
-function abbrevName(name){
+// function squareOrSquareRoot(array) {
+//     return array.map(m =>  Number.isInteger(Math.sqrt(m)) ? Math.sqrt(m) : m*m)
+// }
+// console.log(squareOrSquareRoot([4, 3, 9, 7, 2, 1]))
 
 
-    var splits = name.split(" ");
-    var stringItog = "";
+// function betterThanAverage(classPoints, yourPoints) {
+//     const leng = classPoints.length
+//     const arr = classPoints.reduce((a,b) => a+b )
+//     const resuly = arr / leng
+//     if (resuly < yourPoints) return true
+//     if (resuly > yourPoints) return false
+// }
+//
+// console.log(betterThanAverage([100, 40, 34, 57, 29, 72, 57, 88], 75))
 
-    for (let i = 0; i < splits.length; i++) {
-        let Name = splits[i];
-        let First = Name.substring(0, 1).toUpperCase();
-        let Leftovers = Name.substring(1, Name.length)
-        stringItog += First + Leftovers + " ";
-    }
-    return stringItog
+// function findMultiples(integer, limit) {
+//     let arr = []
+//     for (let i = 1; i <= limit; i++) {
+//         if (i % integer === 0) arr.push(i)
+//     }
+//     return arr
+// }
+//
+// console.log(findMultiples(5, 25))
+
+// function eachCons(array, n) {
+//     let arr = []
+//     for (let i = 0; i < n; i++) {
+//         arr[i]=[]
+//         for (let j = 0; j <n ; j++) {
+//             arr[i] = array.splice(n, n)
+//         }
+//     }
+//     return arr
+// }
+//
+// console.log(eachCons([1,2,3,4], 2))
+
+
+
+function getWeekDay(date) {
+    // let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    // return days[new Date(date).getDay()];
+
+   return  new Date(date).toLocaleDateString();
 }
 
-console.log(abbrevName("Patrick Feenan"))
+
+console.log(getWeekDay("2022-04-13 15:00:00" ))
+
+
